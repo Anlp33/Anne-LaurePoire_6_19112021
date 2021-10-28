@@ -131,7 +131,6 @@ h1 {
   align-items: flex-start;
 }
 
-
 .photograph_description .location {
   font-style: normal;
   font-weight: normal;
@@ -146,8 +145,12 @@ h1 {
   font-size: 18px;
   line-height: 23px;
   color: #525252;
+  margin-top: 10px;
 }
 
+.photograph_description .filter {
+  margin-top: 15px;
+}
 .photograph_header img {
   width: 250px;
   height: 250px;
@@ -182,6 +185,7 @@ h1 {
   color: #d3573c;
   font-style: normal;
   font-weight: normal;
+  margin-bottom: 10px;
 }
 .contact {
   background: #911c1c;
@@ -190,8 +194,27 @@ h1 {
   color: white;
   width: 170px;
   height: 69px;
+  font-family: "DM Sans";
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 26px;
+}
+.button {
+  margin-top: 60px;
+}
+
+.filters {
+  margin: 20px 100px 40px 100px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}
+#filter-select {
+  background: #911c1c;
+  border-radius: 5px;
+  color: white;
 }
