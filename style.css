@@ -66,22 +66,21 @@ h1 {
   color: #d3573c;
   margin: 20px 10px 5px 10px;
 }
-.profiles_1,
-.profiles_2 {
+#profiles{
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.profiles_1 img,
-.profiles_2 img {
-  width: 250px;
-  height: 250px;
+.photo img{
+  width: 200px;
+  height: 200px;
   border-radius: 200px;
   object-fit: cover;
 }
 
-.profiles_details {
+.card{
   width: 30%;
+  margin-bottom: 40px;
 }
 .introduction {
   text-align: center;
