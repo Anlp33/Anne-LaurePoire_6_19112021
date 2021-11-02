@@ -9,7 +9,7 @@
       "tagline": "Voir le beau dans le quotidien",
       "price": 400,
       "portrait": "MimiKeel.jpg",
-      "alt": "portrait femme"
+      "alt": "portrait de la photographe Mimi Keel"
     },
     {
       "name": "Ellie-Rose Wilkens",
@@ -19,7 +19,8 @@
       "tags": ["sports", "architecture"],
       "tagline": "Capturer des compositions complexes",
       "price": 250,
-      "portrait": "EllieRoseWilkens.jpg"
+      "portrait": "EllieRoseWilkens.jpg",
+      "alt": "portrait de la photographe Ellie-Rose Wilkens"
     },
     {
       "name": "Tracy Galindo",
@@ -29,7 +30,8 @@
       "tags": ["art", "fashion", "events"],
       "tagline": "Photographe freelance",
       "price": 500,
-      "portrait": "TracyGalindo.jpg"
+      "portrait": "TracyGalindo.jpg",
+      "alt": "portrait du photographe Tracy Galindo"
     },
     {
       "name": "Nabeel Bradford",
@@ -39,7 +41,8 @@
       "tags": ["travel", "portrait"],
       "tagline": "Toujours aller de l'avant",
       "price": 350,
-      "portrait": "NabeelBradford.jpg"
+      "portrait": "NabeelBradford.jpg",
+      "alt": "portrait du photographe Nabeel Bradford"
     },
     {
       "name": "Rhode Dubois",
@@ -49,7 +52,8 @@
       "tags": ["sport", "fashion", "events", "animals"],
       "tagline": "Je crée des souvenirs",
       "price": 275,
-      "portrait": "RhodeDubois.jpg"
+      "portrait": "RhodeDubois.jpg",
+      "alt": "portrait de la photographe Rhode Dubois"
     },
     {
       "name": "Marcel Nikolic",
@@ -59,7 +63,8 @@
       "tags": ["travel", "architecture"],
       "tagline": "Toujours à la recherche de LA photo",
       "price": 300,
-      "portrait": "MarcelNikolic.jpg"
+      "portrait": "MarcelNikolic.jpg",
+      "alt": "portrait du photographe Marcel Nikolic"
     }
   ],
   "media": [
@@ -71,7 +76,8 @@
       "tags": ["fashion"],
       "likes": 62,
       "date": "2011-12-08",
-      "price": 55
+      "price": 55,
+      "alt": "un modèle photo femme portant un haut et pantalon jaune avec des bottes blanches devant un terrain de basketball"
     },
     {
       "id": 8520927,
@@ -81,7 +87,8 @@
       "tags": ["fashion"],
       "likes": 11,
       "date": "2011-11-06",
-      "price": 55
+      "price": 55,
+      "alt": "un modèle photo femme posant sur un pont et portant un haut et pantalon motif jungle" 
     },
     {
       "id": 9025895,
@@ -91,7 +98,8 @@
       "tags": ["fashion"],
       "likes": 72,
       "date": "2013-08-12",
-      "price": 55
+      "price": 55,
+      "alt": "un modèle photo femme portant une robe avec rayures multicolores et un sac rouge à la ceinture"
     },
     {
       "id": 9275938,
@@ -101,7 +109,8 @@
       "tags": ["events"],
       "likes": 69,
       "date": "2018-02-22",
-      "price": 55
+      "price": 55,
+      "alt": "un hotel de cérémonie de mariage avec des colonnes en pierres où sont accrochés des bouquets de fleurs et un tapis corail dans l'allée centrale"
     },
     {
       "id": 2053494,
@@ -111,7 +120,8 @@
       "tags": ["events"],
       "likes": 2,
       "date": "2020-05-25",
-      "price": 55
+      "price": 55,
+      "alt": "un couple de mariés de dos. Les invités tiennent des jets de scène pour accueillir les mariés. "
     },
     {
       "id": 7324238,
@@ -121,7 +131,8 @@
       "tags": ["events"],
       "likes": 33,
       "date": "2019-06-12",
-      "price": 55
+      "price": 55,
+      "alt": "un décor de repas d'anniversaire avec des ballons formant le nombre dix-huit."
     },
     {
       "id": 8328953,
@@ -131,7 +142,8 @@
       "tags": ["art"],
       "likes": 24,
       "date": "2011-12-08",
-      "price": 100
+      "price": 100,
+      "alt": "un cheval sculpté en bois"
     },
     {
       "id": 7502053,
@@ -141,7 +153,8 @@
       "tags": ["art"],
       "likes": 88,
       "date": "2007-05-07",
-      "price": 55
+      "price": 55,
+      "alt": "une peinture abstraite sur une double porte d'un homme avec un triangle en son centre"
     },
     {
       "id": 8523492,
@@ -151,7 +164,8 @@
       "tags": ["art"],
       "likes": 24,
       "date": "2018-05-05",
-      "price": 55
+      "price": 55,
+      "alt": "un tunnel avec une lumière violette et des graffetis aux murs"
     },
     {
       "id": 75902334,
@@ -161,7 +175,8 @@
       "tags": ["art"],
       "likes": 75,
       "date": "2019-11-25",
-      "price": 55
+      "price": 55,
+      "alt": "une peinture extérieure d'oiseaux bleus et rouges"
     },
 
     {
@@ -172,7 +187,8 @@
       "tags": ["sport"],
       "likes": 52,
       "date": "2013-02-30",
-      "price": 70
+      "price": 70,
+      "alt": "photo prise du dessus montrant des sportifs pratiquant l'aviron, sport de vitesse et de glisse dans de longs bateaux effilés"
     },
     {
       "id": 92758372,
@@ -182,7 +198,8 @@
       "tags": ["fashion"],
       "likes": 58,
       "date": "2018-07-17",
-      "price": 70
+      "price": 70,
+      "alt": "un couple de danseurs en pleine performance"
     },
     {
       "id": 32958383,
@@ -192,7 +209,8 @@
       "tags": ["fashion"],
       "likes": 11,
       "date": "2019-08-12",
-      "price": 70
+      "price": 70,
+      "alt": "une femme portant une robe rouge en dentelle et tulle, descendant des marches en pierre avec une paire de chaussures blanches et noires."
     },
     {
       "id": 928587383,
@@ -202,7 +220,8 @@
       "tags": ["events"],
       "likes": 2,
       "date": "2019-01-02",
-      "price": 70
+      "price": 70,
+      "alt": "une réunion de plusieures personnes qui écoutent et prennent des notes. L'interlocuteur principal utilise la méthode de design thinking, méthode de gestion de l'innovation en écrivant des idées sur des post-its"
     },
     {
       "id": 725639493,
@@ -212,7 +231,8 @@
       "tags": ["events"],
       "likes": 3,
       "date": "2019-05-20",
-      "price": 70
+      "price": 70,
+      "alt": "un homme qui présente un produit à ses interlocuteurs assis qui écoutent la présentation"
     },
     {
       "id": 23394384,
@@ -222,7 +242,8 @@
       "tags": ["events"],
       "likes": 52,
       "date": "2019-07-18",
-      "price": 70
+      "price": 70,
+      "alt": "une femme assise devant un piano éléctrique sur une scène"
     },
     {
       "id": 87367293,
@@ -232,7 +253,8 @@
       "tags": ["events"],
       "likes": 23,
       "date": "2018-02-22",
-      "price": 70
+      "price": 70,
+      "alt": "une femme qui chante au micro sur une scène"
     },
     {
       "id": 593834784,
@@ -242,7 +264,8 @@
       "tags": ["animals"],
       "likes": 52,
       "date": "2017-03-13",
-      "price": 70
+      "price": 70,
+      "alt": "un cerf en pleine nature qui regarde l'objectif"
     },
     {
       "id": 83958935,
@@ -252,7 +275,8 @@
       "tags": ["animals"],
       "likes": 52,
       "date": "2016-06-12",
-      "price": 70
+      "price": 70,
+      "alt": "un chiot qui joue avec sa laisse dans le sable sur une plage"
     },
 
     {
@@ -263,7 +287,8 @@
       "tags": ["travel"],
       "likes": 23,
       "date": "2017-03-18",
-      "price": 45
+      "price": 45,
+      "alt": "une vidéo de paysage de montagnes rocheuses"
     },
     {
       "id": 343423425,
@@ -273,7 +298,8 @@
       "tags": ["travel"],
       "likes": 101,
       "date": "2017-04-03",
-      "price": 45
+      "price": 45,
+      "alt": "une piscine naturelle en extérieur avec des baigneurs"
     },
     {
       "id": 73434243,
@@ -283,7 +309,8 @@
       "tags": ["travel"],
       "likes": 99,
       "date": "2018-04-30",
-      "price": 45
+      "price": 45,
+      "alt": "une longue route dans une vallée"
     },
     {
       "id": 23425523,
@@ -293,7 +320,8 @@
       "tags": ["travel"],
       "likes": 34,
       "date": "2016-04-05",
-      "price": 45
+      "price": 45,
+      "alt": "un pont qui traverse une forêt"
     },
     {
       "id": 23134513,
@@ -303,7 +331,8 @@
       "tags": ["travel"],
       "likes": 23,
       "date": "2017-03-18",
-      "price": 45
+      "price": 45,
+      "alt": "un bateau en bois sur un lac entouré de montagnes"
     },
     {
       "id": 92352352,
@@ -313,7 +342,8 @@
       "tags": ["portrait"],
       "likes": 66,
       "date": "2018-05-24",
-      "price": 45
+      "price": 45,
+      "alt": "portrait d'une femme souriante avec des cheveux roux coiffés en chignon et des tâches de rousseur. Elle porte un rouge à lèvres rouge."
     },
     {
       "id": 34513453,
@@ -323,7 +353,8 @@
       "tags": ["portait"],
       "likes": 52,
       "date": "2017-04-21",
-      "price": 45
+      "price": 45,
+      "alt": "portrait d'un homme en noir et blanc avec une chaîne autour du cou"
     },
     {
       "id": 23523533,
@@ -333,7 +364,8 @@
       "tags": ["portait"],
       "likes": 95,
       "date": "2018-11-02",
-      "price": 45
+      "price": 45,
+      "alt": "portrait en noir et blanc d'une femme avec des cheveux et sourcils contrastés"
     },
     {
       "id": 525834234,
@@ -343,7 +375,8 @@
       "tags": ["portait"],
       "likes": 25,
       "date": "2019-01-02",
-      "price": 45
+      "price": 45,
+      "alt": "portrait en noir et blanc d'un homme qui fume"
     },
 
     {
@@ -354,7 +387,8 @@
       "tags": ["travel"],
       "likes": 88,
       "date": "2019-02-03",
-      "price": 45
+      "price": 45,
+      "alt": "une femme voyageant seule au sommet d'une montagne dans une vallée"
     },
     {
       "id": 625025343,
@@ -364,7 +398,8 @@
       "tags": ["travel"],
       "likes": 85,
       "date": "2019-04-03",
-      "price": 45
+      "price": 45,
+      "alt": "un village coloré sur une montagne en bord de mer"
     },
     {
       "id": 2525345343,
@@ -374,7 +409,8 @@
       "tags": ["portait"],
       "likes": 34,
       "date": "2019-04-07",
-      "price": 45
+      "price": 45,
+      "alt": "portrait d'une enfant en noir et blanc faisant une grimace"
     },
     {
       "id": 2523434634,
@@ -384,7 +420,8 @@
       "tags": ["portait"],
       "likes": 63,
       "date": "2019-04-07",
-      "price": 45
+      "price": 45,
+      "alt": "portrait d'une femme à cheveux courts et à lunettes"
     },
     {
       "id": 398847109,
@@ -394,7 +431,8 @@
       "tags": ["portait"],
       "likes": 55,
       "date": "2019-06-20",
-      "price": 45
+      "price": 45,
+      "alt": "portrait d'une femme en noir et blanc"
     },
     {
       "id": 2534342,
@@ -404,7 +442,8 @@
       "tags": ["events"],
       "likes": 25,
       "date": "2019-06-21",
-      "price": 45
+      "price": 45,
+      "alt": "une grande table de mariage sur une place avec des guirlandes de lumières"
     },
     {
       "id": 65235234,
@@ -414,7 +453,8 @@
       "tags": ["events"],
       "likes": 52,
       "date": "2019-06-25",
-      "price": 45
+      "price": 45,
+      "alt": "un couple de mariés qui prennent la pose dans une forêt. Ils sont front contre front et se tiennent les hanches"
     },
     {
       "id": 23523434,
@@ -424,7 +464,8 @@
       "tags": ["events"],
       "likes": 77,
       "date": "2019-06-28",
-      "price": 45
+      "price": 45,
+      "alt": "un couple de mariés qui prennent la pose sur leur lieu de réception de mariage"
     },
     {
       "id": 5234343,
@@ -434,7 +475,8 @@
       "tags": ["animals"],
       "likes": 142,
       "date": "2019-08-23",
-      "price": 60
+      "price": 60,
+      "alt": "un troupeau de chevaux sauvages dans la montagne"
     },
     {
       "id": 95234343,
@@ -444,7 +486,8 @@
       "tags": ["animals"],
       "likes": 59,
       "date": "2019-07-02",
-      "price": 60
+      "price": 60, 
+      "alt" : "un oiseau multicolore sur une branche"
     },
 
     {
@@ -455,7 +498,8 @@
       "tags": ["travel"],
       "likes": 25,
       "date": "2019-04-03",
-      "price": 60
+      "price": 60, 
+      "alt" : "un quartier traditionnel japonais avec une tour japonaise"
     },
     {
       "id": 2523434,
@@ -465,7 +509,8 @@
       "tags": ["travel"],
       "likes": 53,
       "date": "2019-05-06",
-      "price": 60
+      "price": 60, 
+      "alt" : "un canal à venise avec le coucher du soleil"
     },
     {
       "id": 95293534,
@@ -475,7 +520,8 @@
       "tags": ["travel"],
       "likes": 33,
       "date": "2019-05-12",
-      "price": 60
+      "price": 60, 
+      "alt" : "des montagnes se reflétent sur un lac central"
     },
     {
       "id": 356234343,
@@ -485,7 +531,8 @@
       "tags": ["travel"],
       "likes": 53,
       "date": "2019-06-20",
-      "price": 60
+      "price": 60, 
+      "alt" : "une bicyclette noire posée le mur d'un escalier en pierre, en ville"
     },
     {
       "id": 235234343,
@@ -495,7 +542,8 @@
       "tags": ["travel"],
       "likes": 63,
       "date": "2019-06-26",
-      "price": 60
+      "price": 60, 
+      "alt" : "une porte avec sur la vue d'une ville"
     },
     {
       "id": 6234234343,
@@ -505,7 +553,8 @@
       "tags": ["architecture"],
       "likes": 52,
       "date": "2019-06-30",
-      "price": 60
+      "price": 60, 
+      "alt" : "l'architecture des monuments de Saint Petersburg"
     },
     {
       "id": 6525666253,
@@ -515,7 +564,8 @@
       "tags": ["architecture"],
       "likes": 63,
       "date": "2019-07-20",
-      "price": 60
+      "price": 60, 
+      "alt" : "village perché dans les montagnes"
     },
     {
       "id": 98252523433,
@@ -525,7 +575,8 @@
       "tags": ["architecture"],
       "likes": 88,
       "date": "2020-01-05",
-      "price": 60
+      "price": 60, 
+      "alt" : "la tour de pise vue de dessous"
     },
     {
       "id": 9259398453,
@@ -535,7 +586,8 @@
       "tags": ["architecture"],
       "likes": 57,
       "date": "2020-01-20",
-      "price": 65
+      "price": 65, 
+      "alt" : "vue de dessus des axes routiers de Buenos Aires"
     },
     {
       "id": 3523523534,
@@ -545,7 +597,8 @@
       "tags": ["architecture"],
       "likes": 54,
       "date": "2020-05-05",
-      "price": 60
+      "price": 60, 
+      "alt" : "vue d'un immeuble en angle avec un ciel bleu en arrière-plan"
     },
 
     {
@@ -556,7 +609,8 @@
       "tags": ["sport"],
       "likes": 150,
       "date": "2018-02-30",
-      "price": 70
+      "price": 70, 
+      "alt" : "une femme suspendue par un bras à une poignet qui execute des figures"
     },
     {
       "id": 235234343,
@@ -566,7 +620,8 @@
       "tags": ["sport"],
       "likes": 101,
       "date": "2018-03-05",
-      "price": 65
+      "price": 65, 
+      "alt" : "une femme qui escalade un rocher"
     },
     {
       "id": 235343222,
@@ -576,7 +631,8 @@
       "tags": ["sport"],
       "likes": 103,
       "date": "2018-03-10",
-      "price": 70
+      "price": 70, 
+      "alt" : "un surfer dans une vague"
     },
     {
       "id": 7775342343,
@@ -586,7 +642,8 @@
       "tags": ["sport"],
       "likes": 77,
       "date": "2018-04-16",
-      "price": 50
+      "price": 50, 
+      "alt" : "un skieur en plein saut vers le ciel bleu avec la neige à ses pieds"
     },
     {
       "id": 9253445784,
@@ -596,7 +653,8 @@
       "tags": ["sport"],
       "likes": 88,
       "date": "2018-04-22",
-      "price": 65
+      "price": 65, 
+      "alt" : "une course d'athlétisme féminine"
     },
     {
       "id": 22299394,
@@ -606,7 +664,8 @@
       "tags": ["sport"],
       "likes": 95,
       "date": "2018-04-27",
-      "price": 70
+      "price": 70, 
+      "alt" : "deux garçons faisant du skateboard dans un skateparc"
     },
     {
       "id": 3452342633,
@@ -616,7 +675,8 @@
       "tags": ["architecture"],
       "likes": 52,
       "date": "2018-05-03",
-      "price": 75
+      "price": 75, 
+      "alt" : "le dôme en verre d'un batîment design moderne blanc"
     },
     {
       "id": 939234243,
@@ -626,7 +686,8 @@
       "tags": ["architecture"],
       "likes": 55,
       "date": "2018-05-10",
-      "price": 72
+      "price": 72, 
+      "alt" : "un batîment moderne au dessus de l'eau"
     },
     {
       "id": 222959233,
@@ -636,7 +697,8 @@
       "tags": ["architecture"],
       "likes": 85,
       "date": "2018-05-15",
-      "price": 71
+      "price": 71, 
+      "alt" : "un batîment moderne en forme de fer à cheval"
     },
     {
       "id": 965933434,
@@ -646,7 +708,8 @@
       "tags": ["architecture"],
       "likes": 66,
       "date": "2018-05-20",
-      "price": 58
+      "price": 58, 
+      "alt" : "un batîment moderne en forme de barres"
     },
     {
       "id": 777723343,
@@ -656,7 +719,8 @@
       "tags": ["architecture"],
       "likes": 79,
       "date": "2018-05-21",
-      "price": 80
+      "price": 80, 
+      "alt" : "un batiment moderne avec des courbes"
     }
   ]
 }
