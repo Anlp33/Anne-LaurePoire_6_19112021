@@ -1,4 +1,4 @@
-class Photographer {
+class Photographers {
   constructor(data) {
     this.name = data.name;
     this.city = data.city;
@@ -7,29 +7,32 @@ class Photographer {
     this.portrait = data.portrait;
     this.price = data.price;
     this.tags = data.tags;
+    this.id = data.id;
   }
 
   createHtml() {
-    let tagMap = this.tags.map((tag) => `<li><a href="#">${tag}</a></li>`);
-
     return `
-        <article class="card">
+   
+      <article class="card">
+       <a href ="./photographer.html?id=${this.id}" >
          <div class="introduction">
-            <div class="photo"><img src="FishEye_Photos/Sample Photos/Photographers ID Photos/${
+            <img src="./assets/photographers/${
               this.portrait
-            }"</div>
+            }">
              <h2>${this.name}</h2>
-        </div>
-          <div class="paragraph">
             <span class="location">${this.city + ", " + this.country}</span>
             <span class="slogan">${this.tagline}</span>
             <span class="rate">${this.price}</span>
-            <span class="filter">
-            ${tagMap.join("")}
-            </span>
           </div>
 
-        </article>
+          <div class="filter">${this.tags
+              .map(
+                (tag) =>
+                  `<ul><li><a href="#" class="tags"><span aria-hidden="true">#</span>${tag}</a></li></ul>`
+              )
+              .join("")}</div>
+        </a>
+      </article>
         `;
   }
 }

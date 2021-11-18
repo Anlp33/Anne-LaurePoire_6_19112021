@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/photographer.css" rel="stylesheet" />
+    <title>FishEye - photographer</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/assets/images/logo.png" />
+      </div>
+    </header>
+
+    <main>
+      <section class="photograph_header">
+        <div class="photograph_description">
+          <h2></h2>
+          <span class="location"></span>
+          <span class="tagline"></span>
+          <span class="filter">
+            <li class="classTag">
+              <a href="#"><span aria-hidden="true">#</span></a>
+            </li>
+            <li class="classTag">
+              <a href="#"><span aria-hidden="true">#</span></a>
+            </li>
+            <li class="classTag">
+              <a href="#"><span aria-hidden="true">#</span></a>
+            </li>
+            <li class="classTag">
+              <a href="#"><span aria-hidden="true">#</span></a>
+            </li>
+          </span>
+        </div>
+
+        <div class="button">
+          <button class="contact_button" onclick="displayModal()">
+            Contactez-moi
+          </button>
+        </div>
+
+        <div class="photograph_img"></div>
+      </section>
+
+      <div id="contact_modal">
+        <div class="modal">
+          <header>
+            <h2>Contactez-moi</h2>
+            <img src="assets/icons/close.svg" onclick="closeModal()" />
+          </header>
+          <form>
+            <div>
+              <label>Prénom</label>
+              <input />
+            </div>
+            <button class="contact_button">Envoyer</button>
+          </form>
+        </div>
+      </div>
+
+      <section class="filters">
+        <label for="filter-select">Trier par</label>
+        <select name="filters" id="filter-select">
+          <option value="popularity">Popularité</option>
+          <option value="date">Date</option>
+          <option value="title">Titre</option>
+        </select>
+      </section>
+
+      <section id="gallery"></section>
+    </main>
+    <footer></footer>
+    <script
+      type="text/javascript"
+      src="/scripts/pages/photographer.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/scripts/factories/PhotographerFactory.js"
+    ></script>
+    <script
+     type="text/javascript"
+    src="/scripts/utils/contactForm.js">
+  </script>
+  </body>
+</html>

@@ -69,6 +69,7 @@
   ],
   "media": [
     {
+      "type": "image",
       "id": 342550,
       "photographerId": 82,
       "title": "Fashion Yellow Beach",
@@ -80,6 +81,7 @@
       "alt": "un modèle photo femme portant un haut et pantalon jaune avec des bottes blanches devant un terrain de basketball"
     },
     {
+      "type": "image",
       "id": 8520927,
       "photographerId": 82,
       "title": "Fashion Urban Jungle",
@@ -91,6 +93,7 @@
       "alt": "un modèle photo femme posant sur un pont et portant un haut et pantalon motif jungle" 
     },
     {
+      "type": "image",
       "id": 9025895,
       "photographerId": 82,
       "title": "Fashion Pattern on a Pattern",
@@ -102,6 +105,7 @@
       "alt": "un modèle photo femme portant une robe avec rayures multicolores et un sac rouge à la ceinture"
     },
     {
+      "type": "image",
       "id": 9275938,
       "photographerId": 82,
       "title": "Wedding Gazebo",
@@ -113,6 +117,7 @@
       "alt": "un hotel de cérémonie de mariage avec des colonnes en pierres où sont accrochés des bouquets de fleurs et un tapis corail dans l'allée centrale"
     },
     {
+      "type": "image",
       "id": 2053494,
       "photographerId": 82,
       "title": "Sparkles",
@@ -124,6 +129,7 @@
       "alt": "un couple de mariés de dos. Les invités tiennent des jets de scène pour accueillir les mariés. "
     },
     {
+      "type": "image",
       "id": 7324238,
       "photographerId": 82,
       "title": "18th Anniversary",
@@ -135,6 +141,7 @@
       "alt": "un décor de repas d'anniversaire avec des ballons formant le nombre dix-huit."
     },
     {
+      "type": "video",
       "id": 8328953,
       "photographerId": 82,
       "title": "Wooden Horse Sculpture",
@@ -146,6 +153,7 @@
       "alt": "un cheval sculpté en bois"
     },
     {
+      "type": "image",
       "id": 7502053,
       "photographerId": 82,
       "title": "Triangle Man",
@@ -157,6 +165,7 @@
       "alt": "une peinture abstraite sur une double porte d'un homme avec un triangle en son centre"
     },
     {
+      "type": "image",
       "id": 8523492,
       "photographerId": 82,
       "title": "Purple Tunnel",
@@ -168,6 +177,7 @@
       "alt": "un tunnel avec une lumière violette et des graffetis aux murs"
     },
     {
+      "type": "image",
       "id": 75902334,
       "photographerId": 82,
       "title": "Art Mine",
@@ -180,6 +190,7 @@
     },
 
     {
+      "type": "image",
       "id": 73852953,
       "photographerId": 925,
       "title": "8 Rows",
@@ -191,6 +202,7 @@
       "alt": "photo prise du dessus montrant des sportifs pratiquant l'aviron, sport de vitesse et de glisse dans de longs bateaux effilés"
     },
     {
+      "type": "image",
       "id": 92758372,
       "photographerId": 925,
       "title": "Fashion Wings",
@@ -202,6 +214,7 @@
       "alt": "un couple de danseurs en pleine performance"
     },
     {
+      "type": "image",
       "id": 32958383,
       "photographerId": 925,
       "title": "Melody Red on Stripes",
@@ -213,6 +226,7 @@
       "alt": "une femme portant une robe rouge en dentelle et tulle, descendant des marches en pierre avec une paire de chaussures blanches et noires."
     },
     {
+      "type": "image",
       "id": 928587383,
       "photographerId": 925,
       "title": "Venture Conference",
@@ -224,6 +238,7 @@
       "alt": "une réunion de plusieures personnes qui écoutent et prennent des notes. L'interlocuteur principal utilise la méthode de design thinking, méthode de gestion de l'innovation en écrivant des idées sur des post-its"
     },
     {
+      "type": "image",
       "id": 725639493,
       "photographerId": 925,
       "title": "Product Pitch",
@@ -235,6 +250,7 @@
       "alt": "un homme qui présente un produit à ses interlocuteurs assis qui écoutent la présentation"
     },
     {
+      "type": "image",
       "id": 23394384,
       "photographerId": 925,
       "title": "Musical Festival Keyboard",
@@ -246,6 +262,7 @@
       "alt": "une femme assise devant un piano éléctrique sur une scène"
     },
     {
+      "type": "image",
       "id": 87367293,
       "photographerId": 925,
       "title": "Musical Festival Singer",
@@ -257,6 +274,7 @@
       "alt": "une femme qui chante au micro sur une scène"
     },
     {
+      "type": "image",
       "id": 593834784,
       "photographerId": 925,
       "title": "Animal Majesty",
@@ -268,6 +286,7 @@
       "alt": "un cerf en pleine nature qui regarde l'objectif"
     },
     {
+      "type": "video",
       "id": 83958935,
       "photographerId": 925,
       "title": "Cute Puppy on Sunset",
@@ -280,6 +299,7 @@
     },
 
     {
+      "type": "video",
       "id": 394583434,
       "photographerId": 527,
       "title": "Rock Mountains",
@@ -291,6 +311,7 @@
       "alt": "une vidéo de paysage de montagnes rocheuses"
     },
     {
+      "type": "image",
       "id": 343423425,
       "photographerId": 527,
       "title": "Outdoor Baths",
@@ -302,6 +323,7 @@
       "alt": "une piscine naturelle en extérieur avec des baigneurs"
     },
     {
+      "type": "image",
       "id": 73434243,
       "photographerId": 527,
       "title": "Road into the Hill",
@@ -313,6 +335,7 @@
       "alt": "une longue route dans une vallée"
     },
     {
+      "type": "image",
       "id": 23425523,
       "photographerId": 527,
       "title": "Bridge into the Forest",
@@ -324,6 +347,7 @@
       "alt": "un pont qui traverse une forêt"
     },
     {
+      "type": "image",
       "id": 23134513,
       "photographerId": 527,
       "title": "Boat Wonderer",
@@ -335,6 +359,7 @@
       "alt": "un bateau en bois sur un lac entouré de montagnes"
     },
     {
+      "type": "image",
       "id": 92352352,
       "photographerId": 527,
       "title": "Portrait Sunkiss",
@@ -346,6 +371,7 @@
       "alt": "portrait d'une femme souriante avec des cheveux roux coiffés en chignon et des tâches de rousseur. Elle porte un rouge à lèvres rouge."
     },
     {
+      "type": "image",
       "id": 34513453,
       "photographerId": 527,
       "title": "Shaw Potrait",
@@ -357,6 +383,7 @@
       "alt": "portrait d'un homme en noir et blanc avec une chaîne autour du cou"
     },
     {
+      "type": "image",
       "id": 23523533,
       "photographerId": 527,
       "title": "Alexandra",
@@ -368,6 +395,7 @@
       "alt": "portrait en noir et blanc d'une femme avec des cheveux et sourcils contrastés"
     },
     {
+      "type": "image",
       "id": 525834234,
       "photographerId": 527,
       "title": "Afternoon Break",
@@ -380,6 +408,7 @@
     },
 
     {
+      "type": "image",
       "id": 623534343,
       "photographerId": 243,
       "title": "Lonesome",
@@ -391,6 +420,7 @@
       "alt": "une femme voyageant seule au sommet d'une montagne dans une vallée"
     },
     {
+      "type": "image",
       "id": 625025343,
       "photographerId": 243,
       "title": "Hillside Color",
@@ -402,6 +432,7 @@
       "alt": "un village coloré sur une montagne en bord de mer"
     },
     {
+      "type": "image",
       "id": 2525345343,
       "photographerId": 243,
       "title": "Wednesday Potrait",
@@ -413,6 +444,7 @@
       "alt": "portrait d'une enfant en noir et blanc faisant une grimace"
     },
     {
+      "type": "image",
       "id": 2523434634,
       "photographerId": 243,
       "title": "Nora Portrait",
@@ -424,6 +456,7 @@
       "alt": "portrait d'une femme à cheveux courts et à lunettes"
     },
     {
+      "type": "image",
       "id": 398847109,
       "photographerId": 243,
       "title": "Raw Black Portrait",
@@ -435,6 +468,7 @@
       "alt": "portrait d'une femme en noir et blanc"
     },
     {
+      "type": "image",
       "id": 2534342,
       "photographerId": 243,
       "title": "Seaside Wedding",
@@ -446,6 +480,7 @@
       "alt": "une grande table de mariage sur une place avec des guirlandes de lumières"
     },
     {
+      "type": "image",
       "id": 65235234,
       "photographerId": 243,
       "title": "Boulder Wedding",
@@ -457,6 +492,7 @@
       "alt": "un couple de mariés qui prennent la pose dans une forêt. Ils sont front contre front et se tiennent les hanches"
     },
     {
+      "type": "image",
       "id": 23523434,
       "photographerId": 243,
       "title": "Benevides Wedding",
@@ -468,6 +504,7 @@
       "alt": "un couple de mariés qui prennent la pose sur leur lieu de réception de mariage"
     },
     {
+      "type": "video",
       "id": 5234343,
       "photographerId": 243,
       "title": "Wild Horses in the Mountains",
@@ -479,6 +516,7 @@
       "alt": "un troupeau de chevaux sauvages dans la montagne"
     },
     {
+      "type": "image",
       "id": 95234343,
       "photographerId": 243,
       "title": "Rainbow Bird",
@@ -491,6 +529,7 @@
     },
 
     {
+      "type": "image",
       "id": 52343416,
       "photographerId": 195,
       "title": "Japanese Tower, Kyoto",
@@ -502,6 +541,7 @@
       "alt" : "un quartier traditionnel japonais avec une tour japonaise"
     },
     {
+      "type": "image",
       "id": 2523434,
       "photographerId": 195,
       "title": "Senset on Canals, Venice",
@@ -513,6 +553,7 @@
       "alt" : "un canal à venise avec le coucher du soleil"
     },
     {
+      "type": "image",
       "id": 95293534,
       "photographerId": 195,
       "title": "Mountain and Lake",
@@ -524,6 +565,7 @@
       "alt" : "des montagnes se reflétent sur un lac central"
     },
     {
+      "type": "image",
       "id": 356234343,
       "photographerId": 195,
       "title": "City Bike and Stair, Paris",
@@ -535,6 +577,7 @@
       "alt" : "une bicyclette noire posée le mur d'un escalier en pierre, en ville"
     },
     {
+      "type": "image",
       "id": 235234343,
       "photographerId": 195,
       "title": "Adventure Door, India",
@@ -546,6 +589,7 @@
       "alt" : "une porte avec sur la vue d'une ville"
     },
     {
+      "type": "image",
       "id": 6234234343,
       "photographerId": 195,
       "title": "Contrast, St Petersburg",
@@ -557,6 +601,7 @@
       "alt" : "l'architecture des monuments de Saint Petersburg"
     },
     {
+      "type": "image",
       "id": 6525666253,
       "photographerId": 195,
       "title": "On a Hill, Tibet",
@@ -568,6 +613,7 @@
       "alt" : "village perché dans les montagnes"
     },
     {
+      "type": "image",
       "id": 98252523433,
       "photographerId": 195,
       "title": "Leaning Tower, Pisa",
@@ -579,6 +625,7 @@
       "alt" : "la tour de pise vue de dessous"
     },
     {
+      "type": "video",
       "id": 9259398453,
       "photographerId": 195,
       "title": "Circle Highways, Buenos Aires",
@@ -590,6 +637,7 @@
       "alt" : "vue de dessus des axes routiers de Buenos Aires"
     },
     {
+      "type": "image",
       "id": 3523523534,
       "photographerId": 195,
       "title": "Corner Building and Blue Sky",
@@ -602,6 +650,7 @@
     },
 
     {
+      "type": "video",
       "id": 952343423,
       "photographerId": 930,
       "title": "Tricks in the Air",
@@ -613,6 +662,7 @@
       "alt" : "une femme suspendue par un bras à une poignet qui execute des figures"
     },
     {
+      "type": "image",
       "id": 235234343,
       "photographerId": 930,
       "title": "Climber",
@@ -624,6 +674,7 @@
       "alt" : "une femme qui escalade un rocher"
     },
     {
+      "type": "image",
       "id": 235343222,
       "photographerId": 930,
       "title": "Surfer",
@@ -635,6 +686,7 @@
       "alt" : "un surfer dans une vague"
     },
     {
+      "type": "image",
       "id": 7775342343,
       "photographerId": 930,
       "title": "Skier",
@@ -646,6 +698,7 @@
       "alt" : "un skieur en plein saut vers le ciel bleu avec la neige à ses pieds"
     },
     {
+      "type": "image",
       "id": 9253445784,
       "photographerId": 930,
       "title": "Race End",
@@ -657,6 +710,7 @@
       "alt" : "une course d'athlétisme féminine"
     },
     {
+      "type": "image",
       "id": 22299394,
       "photographerId": 930,
       "title": "Jump!",
@@ -668,6 +722,7 @@
       "alt" : "deux garçons faisant du skateboard dans un skateparc"
     },
     {
+      "type": "image",
       "id": 3452342633,
       "photographerId": 930,
       "title": "White Light",
@@ -679,6 +734,7 @@
       "alt" : "le dôme en verre d'un batîment design moderne blanc"
     },
     {
+      "type": "image",
       "id": 939234243,
       "photographerId": 930,
       "title": "Water on Modern Building",
@@ -690,6 +746,7 @@
       "alt" : "un batîment moderne au dessus de l'eau"
     },
     {
+      "type": "image",
       "id": 222959233,
       "photographerId": 930,
       "title": "Horseshoe",
@@ -701,6 +758,7 @@
       "alt" : "un batîment moderne en forme de fer à cheval"
     },
     {
+      "type": "image",
       "id": 965933434,
       "photographerId": 930,
       "title": "Cross Bar",
@@ -712,6 +770,7 @@
       "alt" : "un batîment moderne en forme de barres"
     },
     {
+      "type": "image",
       "id": 777723343,
       "photographerId": 930,
       "title": "Connected Curves",
