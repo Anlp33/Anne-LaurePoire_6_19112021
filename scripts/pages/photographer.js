@@ -18,14 +18,15 @@
 //  * Find which photographer to display
 //  */
 
-// // const getPhotographerID = async (photographerArray) => {
-// //   const urlID = window.location.search;
+// const getPhotographerID = async (photographerArray) => {
+//   const urlID = window.location.search; //?id=930
+//   alert(urlID);
 
-// //       const photographersFilter = photographerArray.filter((photographer) =>
-// //         photographer.urlID.includes(930)
-// //   );
-// //   console.log(photographersFilter);
-// // };
+//       const photographersFilter = photographerArray.filter((photographer) =>
+//         photographer.urlID.includes(930)
+//   );
+//   console.log(photographersFilter);
+// };
 
 
 // /**
@@ -38,13 +39,13 @@
 // //     let factory = new PhotographerFactory(media, 'image');//donnée fichier json
 // //     gallery.innerHTML += factory.createHtml(media);
 // //   });
-// // // };
-
-// // const init = async () => {
-// //   const { media } = await getData();
-// //   console.log(media);
-// //   getPhotographerID(media);
-// //   // galleryDisplay(media);
 // // };
 
-// // init();
+// const init = async () => {
+//   const { media } = await getData();
+//   console.log(media);
+//   getPhotographerID(media);
+//   // galleryDisplay(media);
+// };
+
+// init();
