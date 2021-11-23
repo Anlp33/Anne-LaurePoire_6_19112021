@@ -21,21 +21,21 @@ const photographerPageID = urlID.match(/\d/g).join("");
 /**
  * Display photographer corresponding to the URL ID
  */
-const photographerId = (photographers) => {
+const photographerId = (photographers, media) => {
   const photographersFilter = photographers.filter(
     (photographer) => photographer.id == photographerPageID
   );
   console.log(photographersFilter);
 
-  //   let photographerDisplay = (photographers) => {
-  // photographers.forEach((photographer) => {
   let photographerModel = new Photographers(photographersFilter[0]);
   photographerIntro.innerHTML = photographerModel.createHtmlPhotographerPage();
-  // });
-  //   };
-  //   photographerDisplay(photographersFilter);
-  const galleryMedia = galleryDisplay(galleryMedia); //cmt je fais pour récupérer média qui appartiennent à ce photographer, filter par rapport à l'id du photographe
-};
+
+    const mediaFilter = media.filter(
+    (media) => media.photographerId == photographerPageID
+    )
+    
+    galleryDisplay(mediaFilter);
+}; 
 
 /**
  * Display photographers on html
@@ -50,9 +50,9 @@ const galleryDisplay = (medias) => {
 };
 
 const init = async () => {
-  const { photographers, media } = await getData();
-  photographerId(photographers);
-  console.log(media);
-};
+    const { photographers, media } = await getData();
+    console.log(media)
+    photographerId(photographers, media);
+  };
 
 init();

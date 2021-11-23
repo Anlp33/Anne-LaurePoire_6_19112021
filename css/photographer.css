@@ -194,8 +194,9 @@ form input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 100px;
 }
-#gallery_item img {
+.gallery_item img, .gallery_item video {
   width: 350px;
   height: 300px;
   border-radius: 5px;

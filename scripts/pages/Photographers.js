@@ -64,5 +64,4 @@ class Photographers {
       </article>
         `;
   }
-  //créer méthode HTML pour la page photographe
 }
