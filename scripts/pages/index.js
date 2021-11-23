@@ -33,6 +33,8 @@ const addEventTag = async (photographerArray) => {
           e.target.innerText.toLowerCase().replace("#", "")
         )
       );
+ 
+      console.log(photographersFilter);
       photographerCard.innerHTML = "";
       photographerDisplay(photographersFilter);
     });

@@ -31,4 +31,38 @@ class Photographers {
       </article>
         `;
   }
+  createHtmlPhotographerPage() {
+    return `<article class="card">
+       <a href ="./photographer.html?id=${this.id}" >
+       <div id="details">
+       <div id="info">
+          <div id="introduction">
+             <h1>${this.name}</h1>
+            <span class="location">${this.city + ", " + this.country}</span>
+            <span class="slogan">${this.tagline}</span>
+          </div>
+               
+          <div class="filter">${this.tags
+              .map(
+                (tag) =>
+                  `<ul><li><a href="#" class="tags"><span aria-hidden="true">#</span>${tag}</a></li></ul>`
+              )
+              .join("")}
+            </div>
+        </div>    
+        
+        <div class="button">
+            <button class="contact_button" onclick="displayModal()">
+            Contactez-moi
+            </button>
+        </div>
+        </div>
+        <div id="photo">
+          <img src="./assets/photographers/${this.portrait}">
+        </div>
+        </a>
+      </article>
+        `;
+  }
+  //créer méthode HTML pour la page photographe
 }

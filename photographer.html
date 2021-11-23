@@ -9,39 +9,15 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="/assets/images/logo.png" />
-      </div>
+      <a href="index.html">
+        <div class="logo">
+          <img src="/assets/images/logo.png" />
+        </div>
+      </a>
     </header>
 
     <main>
-        <div class="photograph_description">
-          <h2></h2>
-          <span class="location"></span>
-          <span class="tagline"></span>
-          <span class="filter">
-            <li class="classTag">
-              <a href="#"><span aria-hidden="true">#</span></a>
-            </li>
-            <li class="classTag">
-              <a href="#"><span aria-hidden="true">#</span></a>
-            </li>
-            <li class="classTag">
-              <a href="#"><span aria-hidden="true">#</span></a>
-            </li>
-            <li class="classTag">
-              <a href="#"><span aria-hidden="true">#</span></a>
-            </li>
-          </span>
-        </div>
-
-        <div class="button">
-          <button class="contact_button" onclick="displayModal()">
-            Contactez-moi
-          </button>
-        </div>
-
-        <div class="photograph_img"></div>
+      <section id="photographer_intro">
       </section>
 
       <div id="contact_modal">
@@ -73,16 +49,14 @@
     </main>
     <footer></footer>
     <script
-      type="text/javascript"
-      src="/scripts/pages/photographer.js"
-    ></script>
-    <script
-      type="text/javascript"
       src="/scripts/factories/PhotographerFactory.js"
     ></script>
     <script
-     type="text/javascript"
-    src="/scripts/utils/contactForm.js">
-  </script>
+      src="/scripts/pages/Photographers.js"
+    ></script>
+    <script src="/scripts/utils/contactForm.js"></script>
+    <script
+      src="/scripts/pages/photographer.js"
+    ></script>
   </body>
 </html>
