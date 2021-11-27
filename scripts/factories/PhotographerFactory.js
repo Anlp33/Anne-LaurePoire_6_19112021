@@ -7,6 +7,7 @@ class PhotographerFactory {
     } else {
       throw "Unknown type format";
     }
+  
   }
 }
 
@@ -22,7 +23,8 @@ class Img {
     this.price = data.price;
   }
   createHtml() {
-    return `<article class="gallery_item">
+    return `
+      <article class="gallery_item">
           <img src="./assets/images/${this.photographerId}/${this.image}" />
           <div class="details">
             <h3>${this.title}</h3>

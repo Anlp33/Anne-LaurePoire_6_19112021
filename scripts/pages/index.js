@@ -24,22 +24,21 @@ let photographerDisplay = (photographers) => {
  * @param {*} photographerArray
  */
 const addEventTag = async (photographerArray) => {
-  const tags = document.querySelectorAll(".classTag");
+  const classtag = document.querySelectorAll(".classTag");
 
-  tags.forEach((tag) => {
+  classtag.forEach((tag) => {
     tag.addEventListener("click", function (e) {
       const photographersFilter = photographerArray.filter((photographer) =>
         photographer.tags.includes(
           e.target.innerText.toLowerCase().replace("#", "")
         )
       );
- 
-      console.log(photographersFilter);
       photographerCard.innerHTML = "";
       photographerDisplay(photographersFilter);
     });
   });
 };
+
 
 const init = async () => {
   const { photographers } = await getData();

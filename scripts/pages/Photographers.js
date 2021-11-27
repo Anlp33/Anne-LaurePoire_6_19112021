@@ -43,11 +43,11 @@ class Photographers {
           </div>
                
           <div class="filter">${this.tags
-              .map(
-                (tag) =>
-                  `<ul><li><a href="#" class="tags"><span aria-hidden="true">#</span>${tag}</a></li></ul>`
-              )
-              .join("")}
+            .map(
+              (tag) =>
+                `<ul><li><a href="#" class="tags"><span aria-hidden="true">#</span>${tag}</a></li></ul>`
+            )
+            .join("")}
             </div>
         </div>    
         
