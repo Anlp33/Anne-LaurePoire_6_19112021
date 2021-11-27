@@ -33,62 +33,59 @@ const photographerPage = (photographers, media) => {
     (media) => media.photographerId == photographerPageID
   );
 
-  console.log(mediaFilter);
+  galleryDisplay(mediaFilter);
 
   /**
    *sort media
    */
 
-//   const addEventSort = async (mediaArray) => {
-//     const selectFilter = document.querySelectorAll(".filter-select");
+  const addEventSort = async () => {
+    const selectFilter = document.querySelectorAll(".filter-select");
+//  
 
-//       selectFilter.forEach((filter) => filter.addEventListener("change", function(e) {
-//       console.log(e.target.value);
-//           const mediaSort = mediaArray.title.sort();
-//       gallery.innerHTML = "";
-//           console.log(mediaSort);
-//       }));
+    selectFilter.forEach((filter) =>
+      filter.addEventListener("change", function (e) {
+            switch (e.target.value) {
+              case "likes":
+                const popularityFilter = mediaFilter.sort((a, b) => {
+                  return b.likes - a.likes;
+                });
+                gallery.innerHTML = "";
+                galleryDisplay(popularityFilter);
+                break;
 
-//   };
+              case "title":
+                  const titleFilter = mediaFilter.sort((a, b) => {
+                  let ta = a.title.toLowerCase();
+                  let tb = b.title.toLowerCase();
 
-  // sort by popularity
-    
-  
-  mediaFilter.sort((a, b) => {
-    return b.likes - a.likes;
-  });
+                  if (ta < tb) {
+                    return -1;
+                  }
+                  if (ta > tb) {
+                    return 1;
+                  }
+                  return 0;
+                });
+                gallery.innerHTML = "";
+                galleryDisplay(titleFilter);
+                break;
 
-    mediaFilter.forEach((media) => console.log(media.likes));
-
-  //sort by title
-  mediaFilter.sort((a, b) => {
-    let ta = a.title.toLowerCase();
-    let tb = b.title.toLowerCase();
-
-    if (ta < tb) {
-      return -1;
-    }
-    if (ta > tb) {
-      return 1;
-    }
-    return 0;
-  });
-    mediaFilter.forEach((media) => console.log(media.title));
-
-  //sort by dates
-
-  mediaFilter.sort((a, b) => {
-    let da = new Date(a.date);
-    let db = new Date(b.date);
-    return db - da;
-  });
-
-  mediaFilter.forEach((media) => console.log(media.date));
-
-  galleryDisplay(mediaFilter);
+              case "date":
+                const dateFilter = mediaFilter.sort((a, b) => {
+                  let da = new Date(a.date);
+                  let db = new Date(b.date);
+                  return db - da;
+                });
+                gallery.innerHTML = "";
+                galleryDisplay(dateFilter);
+                break;
+            }
+      })
+    );
+  };
+  addEventSort();
 };
-
-
 
 /**
  * Display photographers on html
@@ -101,11 +98,9 @@ const galleryDisplay = (medias) => {
   });
 };
 
-
 const init = async () => {
   const { photographers, media } = await getData();
   photographerPage(photographers, media);
-//   await addEventSort(media);
 };
 
 init();
