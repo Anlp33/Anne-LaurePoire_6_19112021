@@ -34,7 +34,7 @@ class Photographers {
   createHtmlPhotographerPage() {
     return `<article class="card">
        <a href ="./photographer.html?id=${this.id}" >
-       <div id="details">
+       <div id="photographer-details">
        <div id="info">
           <div id="introduction">
              <h1>${this.name}</h1>

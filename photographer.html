@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/css/photographer.css" rel="stylesheet" />
+    <link href="css/photographer.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/1cd9585249.js"
+      crossorigin="anonymous"
+    ></script>
     <title>FishEye - photographer</title>
   </head>
   <body>
@@ -17,8 +21,7 @@
     </header>
 
     <main>
-      <section id="photographer_intro">
-      </section>
+      <section id="photographer_intro"></section>
 
       <div id="contact_modal">
         <div class="modal">
@@ -48,16 +51,20 @@
 
       <section id="gallery"></section>
     </main>
+          <div id="modalLightbox">
+        <i class="fas fa-chevron-left"></i>
+        <div id="media-lightbox">
+        </div>
+         <button id="closeLightbox">
+          <i class="fas fa-times"></i>
+        </button>
+        <i class="fas fa-chevron-right"></i>
+      </div>
     <footer></footer>
-    <script
-      src="/scripts/factories/PhotographerFactory.js"
-    ></script>
-    <script
-      src="/scripts/pages/Photographers.js"
-    ></script>
-    <script src="/scripts/utils/contactForm.js"></script>
-    <script
-      src="/scripts/pages/photographer.js"
-    ></script>
+
+    <script src="scripts/factories/MediaFactory.js"></script>
+    <script src="scripts/pages/Photographers.js"></script>
+    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/pages/photographer.js"></script>
   </body>
 </html>
