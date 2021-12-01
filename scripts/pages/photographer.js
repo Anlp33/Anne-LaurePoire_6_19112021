@@ -55,6 +55,7 @@ const photographerPage = (photographers, media) => {
             });
             gallery.innerHTML = "";
             galleryDisplay(popularityFilter);
+            addEventLightbox();
             break;
 
           case "title":
@@ -71,8 +72,8 @@ const photographerPage = (photographers, media) => {
               return 0;
             });
             gallery.innerHTML = "";
-            modalLightbox.innerHTML = "";
             galleryDisplay(titleFilter);
+            addEventLightbox();
             break;
 
           case "date":
@@ -82,8 +83,8 @@ const photographerPage = (photographers, media) => {
               return db - da;
             });
             gallery.innerHTML = "";
-            modalLightbox.innerHTML = "";
             galleryDisplay(dateFilter);
+            addEventLightbox();
             break;
         }
       })
@@ -97,33 +98,89 @@ const photographerPage = (photographers, media) => {
 
   const addEventLightbox = () => {
     const medias = document.querySelectorAll(".media");
-    console.log(medias)
-    const closeModalLightbox = document.getElementById("closeLightbox");
+    const closeLightboxBtn = document.getElementById("closeLightbox");
+    const mediaSource = document.querySelectorAll(".media-src");
+
     const main = document.querySelector("main");
     const header = document.querySelector("header");
-    const mediaLightbox = document.getElementById("media-lightbox");
 
-    // Open the Modal
-    function openModal() {
-      document.getElementById("modalLightbox").style.display = "flex";
+    const previous = document.getElementById("previous");
+    const next = document.getElementById("next");
+
+    function openLightbox() {
+      document.getElementById("lightbox").style.display = "flex";
       main.style.display = "none";
       header.style.display = "none";
     }
-
-    medias.forEach((media) =>
-      media.addEventListener("click", function () {
-        console.log('ok')
-        openModal();
-      })
-    );
-
-    // Close the Modal
-    function closeModal() {
-      document.getElementById("modalLightbox").style.display = "none";
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
       header.style.display = "block";
       main.style.display = "block";
     }
-    closeModalLightbox.addEventListener("click", closeModal);
+
+    medias.forEach((media) =>
+      media.addEventListener("click", function (e) {
+        mediaSource.forEach((media) => {
+          console.log(e.target.innerHTML);
+          console.log(media.innerHTML);
+          if (e.target.innerHTML == media.innerHTML) {
+            console.log("yes");
+          } else console.log("no");
+        });
+        // if (e.target === )
+
+        //openModal with all the media from the photograph
+        openLightbox();
+
+        //close lightbox//
+
+        closeLightboxBtn.addEventListener("click", closeLightbox);
+
+        //       //slides
+
+        //       let slideIndex = 1;
+        //       showSlide(slideIndex);
+
+        //       previous.addEventListener("click", changeSlide(-1));
+        //       next.addEventListener("click", changeSlide(1));
+
+        //       // Note that you are assigning new values here to our slidIndex.
+
+        //       function changeSlide(n) {
+        //         showSlide((slideIndex += n));
+        //       }
+
+        //       // This is your logic for the light box. It will decide which slide to show
+        //       // and which dot is active.
+
+        //       function showSlide(n) {
+        //         const slides = document.getElementsByClassName("slide");
+
+        //         console.log(slides.length)
+        //         if (n > slides.length) {
+        //           slideIndex = 1;
+        //         }
+
+        //         if (n < 1) {
+        //           slideIndex = slides.length;
+        //         }
+
+        //         for (let i = 0; i < slides.length; i++) {
+        //           slides[i].style.display = "none";
+        //         }
+
+        //         for (let i = 0; i < medias.length; i++) {
+        //           medias[i].className = medias[i].className.replace(
+        //             " active",
+        //             ""
+        //           );
+        //         }
+
+        //         slides[slideIndex - 1].style.display = "block";
+        //         medias[slideIndex - 1].className += " active";
+        //       }
+      })
+    );
   };
 
   addEventLightbox();
@@ -137,11 +194,10 @@ const galleryDisplay = (medias) => {
   medias.forEach((media) => {
     let factory = new MediaFactory(media);
     gallery.innerHTML += factory.createHtml();
-    modalLightbox.innerHTML += factory.createMediaLightbox();
+    lightbox.innerHTML += factory.createMediaLightbox();
   });
 };
 
-   
 const init = async () => {
   const { photographers, media } = await getData();
   photographerPage(photographers, media);

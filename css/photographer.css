@@ -187,13 +187,17 @@ form input {
 }
 /*Lightbox*/
 
-#modalLightbox {
+.light-box-content {
   display: none;
-  width: 1253px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: auto;
   height: 984px;
 }
 
-#media-lightbox img, #media-lightbox video {
+.media-lightbox img,
+.media-lightbox video {
   width: 1050px;
   height: 900px;
   border-radius: 5px;
@@ -202,13 +206,20 @@ form input {
 #closeLightbox {
   background: white;
   border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-#modalLightbox i {
+#lightbox i {
   font-size: 40px;
   color: #901c1c;
+  cursor: pointer;
 }
-.hidden {
+.hide {
   display: none;
+}
+.show {
+  display: flex;
 }
 
 /*Gallery*/
@@ -219,12 +230,14 @@ form input {
   justify-content: space-between;
   margin: 0 100px;
 }
+
 .gallery_item img,
 .gallery_item video {
   width: 350px;
   height: 300px;
   border-radius: 5px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .like img {
