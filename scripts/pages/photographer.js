@@ -3,7 +3,10 @@
  */
 const photographerIntro = document.getElementById("photographer_intro");
 const gallery = document.getElementById("gallery");
-const modalLightbox = document.getElementById("modalLightbox");
+const lightbox = document.getElementById("lightbox");
+const mediaLightboxFrame = document.getElementById("media-lightbox-frame");
+const main = document.querySelector("main");
+const header = document.querySelector("header");
 
 const getData = async () => {
   return await fetch("./data/FishEyeData.json").then((res) => res.json());
@@ -54,6 +57,7 @@ const photographerPage = (photographers, media) => {
               return b.likes - a.likes;
             });
             gallery.innerHTML = "";
+            lightbox.innerHTML = "";
             galleryDisplay(popularityFilter);
             addEventLightbox();
             break;
@@ -72,6 +76,7 @@ const photographerPage = (photographers, media) => {
               return 0;
             });
             gallery.innerHTML = "";
+            lightbox.innerHTML = "";
             galleryDisplay(titleFilter);
             addEventLightbox();
             break;
@@ -83,6 +88,7 @@ const photographerPage = (photographers, media) => {
               return db - da;
             });
             gallery.innerHTML = "";
+            lightbox.innerHTML = "";
             galleryDisplay(dateFilter);
             addEventLightbox();
             break;
@@ -97,13 +103,9 @@ const photographerPage = (photographers, media) => {
    */
 
   const addEventLightbox = () => {
-    const medias = document.querySelectorAll(".media");
+    const mediaGallery = document.querySelectorAll(".media");
     const closeLightboxBtn = document.getElementById("closeLightbox");
-    const mediaSource = document.querySelectorAll(".media-src");
-
-    const main = document.querySelector("main");
-    const header = document.querySelector("header");
-
+    const mediaLightbox = document.querySelectorAll(".media-lightbox")
     const previous = document.getElementById("previous");
     const next = document.getElementById("next");
 
@@ -118,73 +120,79 @@ const photographerPage = (photographers, media) => {
       main.style.display = "block";
     }
 
-    medias.forEach((media) =>
+    mediaGallery.forEach((media) =>
       media.addEventListener("click", function (e) {
-        mediaSource.forEach((media) => {
-          console.log(e.target.innerHTML);
-          console.log(media.innerHTML);
-          if (e.target.innerHTML == media.innerHTML) {
-            console.log("yes");
-          } else console.log("no");
-        });
-        // if (e.target === )
-
         //openModal with all the media from the photograph
         openLightbox();
 
-        //close lightbox//
+        mediaLightbox.forEach((media) => {
+          const clickedMedia = e.target.attributes.src.nodeValue;
+          const mediaSrc = media.childNodes[1].attributes.src.nodeValue;
 
-        closeLightboxBtn.addEventListener("click", closeLightbox);
+          if (clickedMedia === mediaSrc) {
+            media.style.display = "block";
+          } else media.style.display = "none";
+        })}));
+        
 
-        //       //slides
+    //close lightbox//
 
-        //       let slideIndex = 1;
-        //       showSlide(slideIndex);
-
-        //       previous.addEventListener("click", changeSlide(-1));
-        //       next.addEventListener("click", changeSlide(1));
-
-        //       // Note that you are assigning new values here to our slidIndex.
-
-        //       function changeSlide(n) {
-        //         showSlide((slideIndex += n));
-        //       }
-
-        //       // This is your logic for the light box. It will decide which slide to show
-        //       // and which dot is active.
-
-        //       function showSlide(n) {
-        //         const slides = document.getElementsByClassName("slide");
-
-        //         console.log(slides.length)
-        //         if (n > slides.length) {
-        //           slideIndex = 1;
-        //         }
-
-        //         if (n < 1) {
-        //           slideIndex = slides.length;
-        //         }
-
-        //         for (let i = 0; i < slides.length; i++) {
-        //           slides[i].style.display = "none";
-        //         }
-
-        //         for (let i = 0; i < medias.length; i++) {
-        //           medias[i].className = medias[i].className.replace(
-        //             " active",
-        //             ""
-        //           );
-        //         }
-
-        //         slides[slideIndex - 1].style.display = "block";
-        //         medias[slideIndex - 1].className += " active";
-        //       }
-      })
-    );
-  };
+    closeLightboxBtn.addEventListener("click", closeLightbox);
+};
+  
 
   addEventLightbox();
 };
+
+
+    //       //slides
+
+    //       let slideIndex = 1;
+    //       showSlide(slideIndex);
+
+    //       previous.addEventListener("click", changeSlide(-1));
+    //       next.addEventListener("click", changeSlide(1));
+
+    //       // Note that you are assigning new values here to our slidIndex.
+
+    //       function changeSlide(n) {
+    //         showSlide((slideIndex += n));
+    //       }
+
+    //       // This is your logic for the light box. It will decide which slide to show
+    //       // and which dot is active.
+
+    //       function showSlide(n) {
+    //         const slides = document.getElementsByClassName("slide");
+
+    //         console.log(slides.length)
+    //         if (n > slides.length) {
+    //           slideIndex = 1;
+    //         }
+
+    //         if (n < 1) {
+    //           slideIndex = slides.length;
+    //         }
+
+    //         for (let i = 0; i < slides.length; i++) {
+    //           slides[i].style.display = "none";
+    //         }
+
+    //         for (let i = 0; i < medias.length; i++) {
+    //           medias[i].className = medias[i].className.replace(
+    //             " active",
+    //             ""
+    //           );
+    //         }
+
+    //         slides[slideIndex - 1].style.display = "block";
+    //         medias[slideIndex - 1].className += " active";
+    //       }
+    //   })
+    // );
+    // };
+
+
 
 /**
  * Display photographers on html
@@ -194,7 +202,7 @@ const galleryDisplay = (medias) => {
   medias.forEach((media) => {
     let factory = new MediaFactory(media);
     gallery.innerHTML += factory.createHtml();
-    lightbox.innerHTML += factory.createMediaLightbox();
+    mediaLightboxFrame.innerHTML += factory.createMediaLightbox();
   });
 };
 

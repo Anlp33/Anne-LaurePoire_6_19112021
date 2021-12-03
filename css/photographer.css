@@ -187,7 +187,7 @@ form input {
 }
 /*Lightbox*/
 
-.light-box-content {
+#lightbox {
   display: none;
   align-items: center;
   justify-content: space-between;
@@ -196,8 +196,13 @@ form input {
   height: 984px;
 }
 
-.media-lightbox img,
-.media-lightbox video {
+#media-lightbox-frame {
+  display: flex;
+  flex-direction: column;
+}
+
+#media-lightbox-frame img,
+#media-lightbox-frame video {
   width: 1050px;
   height: 900px;
   border-radius: 5px;
@@ -215,13 +220,6 @@ form input {
   color: #901c1c;
   cursor: pointer;
 }
-.hide {
-  display: none;
-}
-.show {
-  display: flex;
-}
-
 /*Gallery*/
 
 #gallery {

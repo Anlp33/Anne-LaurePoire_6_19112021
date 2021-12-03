@@ -35,25 +35,10 @@ class Img {
         `;
   }
   createMediaLightbox() {
-    return `
-    <div id="previous">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-    <div class="media-lightbox">
-    <div class="media-src">
+    return `<div class="media-lightbox">
       <img src="./assets/images/${this.photographerId}/${this.image}"/>
-      </div>
       <h3>${this.title}</h3>
-      <span class="hidden">${this.likes}</span>
-      <span class="hidden">${this.date}</span>
-      <span class="hidden">${this.id}</span>
-    </div>
-          <div id="next">
-          <i class="fas fa-chevron-right"></i>
-          </div>
-          <button id="closeLightbox">
-           <i class="fas fa-times"></i>
-          </button>`;
+      </div>`;
   }
 }
 
@@ -71,7 +56,7 @@ class Video {
   createHtml() {
     return `<article class="gallery_item">
     <div class="media">
-          <video controls> <source src="./assets/images/${this.photographerId}/${this.video}" type="video/mp4"> </video>
+          <video src="./assets/images/${this.photographerId}/${this.video}" controls type="video/mp4"> </video>
     </div>
           <div class="details">
             <h3>${this.title}</h3>
@@ -81,24 +66,9 @@ class Video {
         `;
   }
   createMediaLightbox() {
-    return ` <div id="previous">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-    <div class="media-lightbox">
-        <div class="media-src">
-       <video controls> <source src="./assets/images/${this.photographerId}/${this.video}" type="video/mp4"> </video>
-      </div>
+    return `<div class="media-lightbox">
+    <video src="./assets/images/${this.photographerId}/${this.video}" controls type="video/mp4"> </video>
        <h3>${this.title}</h3>
-       <span class="hidden">${this.likes}</span>
-      <span class="hidden">${this.date}</span>
-      <span class="hidden">${this.id}</span>
-          </div>
-          <div id="next">
-          <i class="fas fa-chevron-right"></i>
-          </div>
-          <button id="closeLightbox">
-           <i class="fas fa-times"></i>
-          </button>
-`;
+       </div>`;
   }
 }
