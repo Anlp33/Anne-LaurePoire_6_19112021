@@ -145,8 +145,10 @@ a {
 }
 
 .modal header {
+  display: flex;
   justify-content: space-between;
   width: 100%;
+  align-items: flex-start;
 }
 
 .modal header img {
@@ -190,7 +192,7 @@ form input {
 #lightbox {
   display: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
   width: auto;
   height: 984px;
@@ -238,10 +240,15 @@ form input {
   cursor: pointer;
 }
 
-.like img {
-  height: 18.35px;
-  width: 17.5px;
-  object-fit: cover;
+.like {
+  color: #901c1c;
+  font-weight: bold;
+}
+.like i {
+  margin-left: 5px;
+}
+.hearts {
+  cursor: pointer;
 }
 .details {
   display: flex;

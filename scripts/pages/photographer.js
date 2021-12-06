@@ -12,6 +12,15 @@ const getData = async () => {
   return await fetch("./data/FishEyeData.json").then((res) => res.json());
 };
 
+// function toggle(x) {
+//   let element = document.getElementsById(x);
+//   if (element.style.display === "none") {
+//     element.style.display = "block";
+//   } else {
+//     element.style.display = "none";
+//   }
+// }
+
 /**
  * Get photographer ID in URL
  */
@@ -41,6 +50,22 @@ const photographerPage = (photographers, media) => {
   );
   galleryDisplay(mediaFilter);
 
+  //Likes increment
+
+  const likesIncrement = async () => {
+    const likeBtn = document.querySelectorAll(".hearts");
+    let numberOfLikesHtml = document.querySelectorAll(".numbers");
+
+    likeBtn.forEach((button, index) => {
+      button.addEventListener("click", function () {
+        mediaFilter[index].likes += 1;
+        numberOfLikesHtml[index].innerHTML = mediaFilter[index].likes;
+      });
+    });
+  };
+
+  likesIncrement();
+
   /**
    *sort media
    */
@@ -50,7 +75,7 @@ const photographerPage = (photographers, media) => {
     //
 
     selectFilter.forEach((filter) =>
-      filter.addEventListener("change", function (e) {
+      filter.addEventListener("change", async function (e) {
         switch (e.target.value) {
           case "likes":
             const popularityFilter = mediaFilter.sort((a, b) => {
@@ -59,6 +84,7 @@ const photographerPage = (photographers, media) => {
             gallery.innerHTML = "";
             lightbox.innerHTML = "";
             galleryDisplay(popularityFilter);
+            likesIncrement();
             addEventLightbox();
             break;
 
@@ -78,6 +104,7 @@ const photographerPage = (photographers, media) => {
             gallery.innerHTML = "";
             lightbox.innerHTML = "";
             galleryDisplay(titleFilter);
+            likesIncrement();
             addEventLightbox();
             break;
 
@@ -90,6 +117,7 @@ const photographerPage = (photographers, media) => {
             gallery.innerHTML = "";
             lightbox.innerHTML = "";
             galleryDisplay(dateFilter);
+            likesIncrement();
             addEventLightbox();
             break;
         }
@@ -102,10 +130,10 @@ const photographerPage = (photographers, media) => {
    * Lightbox
    */
 
-  const addEventLightbox = () => {
+  const addEventLightbox = async() => {
     const mediaGallery = document.querySelectorAll(".media");
     const closeLightboxBtn = document.getElementById("closeLightbox");
-    const mediaLightbox = document.querySelectorAll(".media-lightbox")
+    const mediaLightbox = document.querySelectorAll(".media-lightbox");
     const previous = document.getElementById("previous");
     const next = document.getElementById("next");
 
@@ -122,77 +150,46 @@ const photographerPage = (photographers, media) => {
 
     mediaGallery.forEach((media) =>
       media.addEventListener("click", function (e) {
-        //openModal with all the media from the photograph
+        //openModal with all the media from the photographer
         openLightbox();
 
+        //show media that has been clicked
         mediaLightbox.forEach((media) => {
           const clickedMedia = e.target.attributes.src.nodeValue;
           const mediaSrc = media.childNodes[1].attributes.src.nodeValue;
 
+
           if (clickedMedia === mediaSrc) {
             media.style.display = "block";
+            console.log(media.nextElementSibling)
           } else media.style.display = "none";
-        })}));
-        
+
+          next.addEventListener("click", function (e) {
+           // display next media and hide current one
+            if (clickedMedia === mediaSrc) {
+              media.style.display = "none";
+              media.nextElementSibling.style.display = "block";
+            } 
+          })
+
+          previous.addEventListener("click", function () {
+              if (clickedMedia === mediaSrc) {
+                media.style.display = "none";
+                media.previousElementSibling.style.display = "block";
+              } 
+          })
+
+        });
+      })
+    );
 
     //close lightbox//
-
     closeLightboxBtn.addEventListener("click", closeLightbox);
-};
-  
+
+  };
 
   addEventLightbox();
 };
-
-
-    //       //slides
-
-    //       let slideIndex = 1;
-    //       showSlide(slideIndex);
-
-    //       previous.addEventListener("click", changeSlide(-1));
-    //       next.addEventListener("click", changeSlide(1));
-
-    //       // Note that you are assigning new values here to our slidIndex.
-
-    //       function changeSlide(n) {
-    //         showSlide((slideIndex += n));
-    //       }
-
-    //       // This is your logic for the light box. It will decide which slide to show
-    //       // and which dot is active.
-
-    //       function showSlide(n) {
-    //         const slides = document.getElementsByClassName("slide");
-
-    //         console.log(slides.length)
-    //         if (n > slides.length) {
-    //           slideIndex = 1;
-    //         }
-
-    //         if (n < 1) {
-    //           slideIndex = slides.length;
-    //         }
-
-    //         for (let i = 0; i < slides.length; i++) {
-    //           slides[i].style.display = "none";
-    //         }
-
-    //         for (let i = 0; i < medias.length; i++) {
-    //           medias[i].className = medias[i].className.replace(
-    //             " active",
-    //             ""
-    //           );
-    //         }
-
-    //         slides[slideIndex - 1].style.display = "block";
-    //         medias[slideIndex - 1].className += " active";
-    //       }
-    //   })
-    // );
-    // };
-
-
 
 /**
  * Display photographers on html

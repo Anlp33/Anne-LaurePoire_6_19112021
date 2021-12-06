@@ -29,7 +29,12 @@ class Img {
         </div>
        <div class="details">
             <h3>${this.title}</h3>
-            <span class="like">${this.likes}<img src="./assets/icons/heart.png" /> </span>
+        <div class="like">
+              <span class="numbers">${this.likes}</span>
+              <span class="hearts">
+                <i class="fas fa-heart full">
+                </i>
+              </span>
         </div>
       </article>
         `;
@@ -60,8 +65,12 @@ class Video {
     </div>
           <div class="details">
             <h3>${this.title}</h3>
-            <span class="like">${this.likes}<img src="./assets/icons/heart.png" /> </span>
-          </div>
+            <div class="like">
+              <span class="numbers">${this.likes}</span>
+              <span class="hearts">
+                <i class="fas fa-heart full">
+                </i>
+              </span></div>
         </article>
         `;
   }
