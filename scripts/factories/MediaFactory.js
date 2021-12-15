@@ -19,7 +19,6 @@ class Img {
     this.likes = data.likes;
     this.tags = data.tags;
     this.date = data.date;
-    this.price = data.price;
   }
   createHtml() {
     return `
@@ -31,16 +30,16 @@ class Img {
             <h3>${this.title}</h3>
         <div class="like">
               <span class="numbers">${this.likes}</span>
-              <span class="hearts">
-                <i class="fas fa-heart full">
+              <span class="hearts" data-like="false">
+                <i class="fas fa-heart" alt="coeur" aria-label="ajoute ou supprime le like au clic">
                 </i>
-              </span>
+              </span> 
         </div>
       </article>
         `;
   }
   createMediaLightbox() {
-    return `<div class="media-lightbox">
+    return `<div class="media-lightbox hide">
       <img src="./assets/images/${this.photographerId}/${this.image}"/>
       <h3>${this.title}</h3>
       </div>`;
@@ -56,7 +55,6 @@ class Video {
     this.likes = data.likes;
     this.tags = data.tags;
     this.date = data.date;
-    this.price = data.price;
   }
   createHtml() {
     return `<article class="gallery_item">
@@ -67,15 +65,15 @@ class Video {
             <h3>${this.title}</h3>
             <div class="like">
               <span class="numbers">${this.likes}</span>
-              <span class="hearts">
-                <i class="fas fa-heart full">
+              <span class="hearts" data-like="false">
+                <i class="fas fa-heart" alt="coeur" aria-label="ajoute ou supprime le like au clic">
                 </i>
               </span></div>
         </article>
         `;
   }
   createMediaLightbox() {
-    return `<div class="media-lightbox">
+    return `<div class="media-lightbox hide">
     <video src="./assets/images/${this.photographerId}/${this.video}" controls type="video/mp4"> </video>
        <h3>${this.title}</h3>
        </div>`;

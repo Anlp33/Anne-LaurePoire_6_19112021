@@ -31,6 +31,7 @@ class Photographers {
       </article>
         `;
   }
+
   createHtmlPhotographerPage() {
     return `<article class="card">
        <a href ="./photographer.html?id=${this.id}" >
@@ -52,16 +53,26 @@ class Photographers {
         </div>    
         
         <div class="button">
-            <button class="contact_button" onclick="displayModal()">
+            <button id="contact_button">
             Contactez-moi
             </button>
         </div>
+
         </div>
         <div id="photo">
           <img src="./assets/photographers/${this.portrait}">
         </div>
         </a>
       </article>
+       <div id="total_likes">
+       <div id="numberTotalLikes" aria-labelledby="nombre total de like"></div>
+        <i
+          class="fas fa-heart"
+          alt="coeur"
+          aria-label="ajoute ou supprime le like au clic"
+        ></i>
+      <div id="price">${this.price} €/jour</div>
+      </div>
         `;
   }
 }

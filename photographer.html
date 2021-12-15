@@ -15,60 +15,23 @@
     <header>
       <a href="index.html">
         <div class="logo">
-          <img src="/assets/images/logo.png" />
+          <img
+            src="/assets/images/logo.png"
+            role="image"
+            aria-label="logo de FishEye"
+          />
         </div>
       </a>
     </header>
 
     <main>
-      <section id="photographer_intro"></section>
-
-      <div id="contact_modal">
-        <div class="modal">
-          <header>
-            <h2>Contactez-moi</h2>
-            <img src="assets/icons/close.svg" onclick="closeModal()" />
-          </header>
-          <form id="form">
-            <div>
-              <label>Prénom</label>
-              <input 
-                  class="text-control"
-                  type="firstname"
-                  id="firstname"
-                  value=""
-                  name="firstname" />
-              <label>Nom</label>
-                 <input 
-                  class="text-control"
-                  type="name"
-                  id="name"
-                  value=""
-                  name="name" />
-              <label>Email</label>
-                <input
-                  class="text-control"
-                  type="email"
-                  id="email"
-                  value=""
-                  name="email"
-                />
-              <label>Votre message</label>
-                <input
-                  class="text-control"
-                  type="message"
-                  id="message"
-                  value=""
-                  name="message"
-                />
-            </div>
-            <button class="contact_button">Envoyer</button>
-          </form>
-        </div>
-      </div>
+      <section
+        id="photographer_intro"
+        aria-labelledby="informations du photographe"
+      ></section>
 
       <section class="filters">
-        <label for="filter-select">Trier par</label>
+        <label for="Tri par filtre">Trier par</label>
         <select name="filters" class="filter-select">
           <option value="">Selectionner…</option>
           <option value="likes">Popularité</option>
@@ -77,26 +40,91 @@
         </select>
       </section>
 
-      <section id="gallery"></section>
+      <section
+        id="gallery"
+        aria-labelledby="gallerie média du photographe"
+      ></section>
+
     </main>
-          <div id="lightbox">
-            <div id="previous">
-                <i class="fas fa-chevron-left"></i>
-              </div>
-          <div id="media-lightbox-frame"> 
-          </div>
-           <div id="next">
-          <i class="fas fa-chevron-right"></i>
-          </div>
-          <button id="closeLightbox">
-           <i class="fas fa-times"></i>
-          </button>
+    <div id="lightbox">
+      <div id="previous">
+        <i
+          class="fas fa-chevron-left"
+          alt="flêche gauche"
+          role="affiche le média précédent au clic"
+        ></i>
       </div>
+      <div id="media-lightbox-frame"></div>
+      <div id="next">
+        <i
+          class="fas fa-chevron-right"
+          alt="flêche droite"
+          role="affiche le média suivant au clic"
+        ></i>
+      </div>
+      <button id="closeLightbox" aria-label="Fermer">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div id="contact_modal" role="dialog" aria-describedby="Contact modal">
+      <div class="modal">
+        <header>
+          <div id="contactPhotographer">
+            <h2>Contactez-moi</h2>
+            <div id="namePhotographer"></div>
+          </div>
+          <div id="close_Button">
+            <img src="assets/icons/close.svg" aria-label="Fermer" />
+          </div>
+        </header>
+
+        <form id="form">
+          <div role="formulaire de contact" aria-labelledby="coordonnees">
+            <label for="prenom">Prénom</label>
+            <input
+              class="text-control"
+              type="firstname"
+              id="firstname"
+              value=""
+              name="firstname"
+            />
+            <label for="nom">Nom</label>
+            <input
+              class="text-control"
+              type="name"
+              id="name"
+              value=""
+              name="name"
+            />
+            <label for="email">Email</label>
+            <input
+              class="text-control"
+              type="email"
+              id="email"
+              value=""
+              name="email"
+            />
+            <label for="précisions">Votre message</label>
+            <input
+              class="text-control"
+              type="message"
+              id="message"
+              value=""
+              name="message"
+            />
+          </div>
+          <button aria-label="Fermer" id="sendingButton" type="submit">
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </div>
     <footer></footer>
 
     <script src="scripts/factories/MediaFactory.js"></script>
     <script src="scripts/pages/Photographers.js"></script>
-    <script src="scripts/utils/contactForm.js"></script>
     <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/utils/contactForm.js"></script>
   </body>
 </html>
