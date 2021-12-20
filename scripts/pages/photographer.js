@@ -1,6 +1,5 @@
-/**
- * Get JSON data with Fetch
- */
+
+//Global variables
 const photographerIntro = document.getElementById("photographer_intro");
 const gallery = document.getElementById("gallery");
 const lightbox = document.getElementById("lightbox");
@@ -8,6 +7,9 @@ const mediaLightboxFrame = document.getElementById("media-lightbox-frame");
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 
+/**
+ * Get JSON data with Fetch
+ */
 
 const getData = async () => {
   return await fetch("./data/FishEyeData.json").then((res) => res.json());
@@ -84,29 +86,25 @@ const photographerPage = (photographers, media) => {
   likesIncrement();
 
   /**
-   *sort media
+   *sort media on event select
    */
 
   const addEventSort = async () => {
     const selectFilter = document.querySelectorAll(".filter-select");
-    //
+    
+    let arrayFilter = [];
 
     selectFilter.forEach((filter) =>
       filter.addEventListener("change", async function (e) {
         switch (e.target.value) {
           case "likes":
-            const popularityFilter = mediaFilter.sort((a, b) => {
+             arrayFilter = mediaFilter.sort((a, b) => {
               return b.likes - a.likes;
             });
-            gallery.innerHTML = "";
-            lightbox.innerHTML = "";
-            galleryDisplay(popularityFilter);
-            likesIncrement();
-            addEventLightbox();
             break;
 
           case "title":
-            const titleFilter = mediaFilter.sort((a, b) => {
+            arrayFilter  = mediaFilter.sort((a, b) => {
               let ta = a.title.toLowerCase();
               let tb = b.title.toLowerCase();
 
@@ -118,26 +116,21 @@ const photographerPage = (photographers, media) => {
               }
               return 0;
             });
-            gallery.innerHTML = "";
-            lightbox.innerHTML = "";
-            galleryDisplay(titleFilter);
-            likesIncrement();
-            addEventLightbox();
             break;
 
           case "date":
-            const dateFilter = mediaFilter.sort((a, b) => {
+            arrayFilter = mediaFilter.sort((a, b) => {
               let da = new Date(a.date);
               let db = new Date(b.date);
               return db - da;
             });
-            gallery.innerHTML = "";
-            lightbox.innerHTML = "";
-            galleryDisplay(dateFilter);
-            likesIncrement();
-            addEventLightbox();
             break;
         }
+                        gallery.innerHTML = "";
+                        mediaLightboxFrame.innerHTML = "";
+                        galleryDisplay(arrayFilter);
+                        likesIncrement();
+                        addEventLightbox();
       })
     );
   };
@@ -153,6 +146,8 @@ const photographerPage = (photographers, media) => {
     const mediaLightbox = document.querySelectorAll(".media-lightbox");
     const previous = document.getElementById("previous");
     const next = document.getElementById("next");
+    console.log("fonction")
+    console.log(next)
 
     let index = 0;
 
@@ -174,6 +169,30 @@ const photographerPage = (photographers, media) => {
       mediaLightbox[index].classList.toggle("hide");
     }
 
+    function goToNext() {
+      mediaLightbox[index].classList.toggle("hide");
+
+      if (index == mediaLightbox.length - 1) {
+        mediaLightbox[0].classList.toggle("hide");
+        index = 0;
+      } else {
+        mediaLightbox[index + 1].classList.toggle("hide");
+        index++;
+      }
+    }
+    function goToPrevious() {
+      mediaLightbox[index].classList.toggle("hide");
+      console.log(index);
+
+      if (index <= 0) {
+        console.log("ok");
+        index = mediaLightbox.length - 1;
+        mediaLightbox[index].classList.toggle("hide");
+      } else {
+        mediaLightbox[index - 1].classList.toggle("hide");
+        index--;
+      }
+    }
     mediaGallery.forEach((media) =>
       media.addEventListener("click", function (e) {
         //openModal with all the media from the photographer
@@ -194,58 +213,22 @@ const photographerPage = (photographers, media) => {
       })
     );
 
-    next.addEventListener("click", function () {
-      mediaLightbox[index].classList.toggle("hide");
+    next.addEventListener("click", goToNext);
 
-      if (index == mediaLightbox.length - 1) {
-        mediaLightbox[0].classList.toggle("hide");
-        index = 0;
-      } else {
-        mediaLightbox[index + 1].classList.toggle("hide");
-        index++;
-      }
-    });
-
-    previous.addEventListener("click", function () {
-      mediaLightbox[index].classList.toggle("hide");
-      console.log(index);
-
-      if (index <= 0) {
-        console.log("ok");
-        index = mediaLightbox.length - 1;
-        mediaLightbox[index].classList.toggle("hide");
-      } else {
-        mediaLightbox[index - 1].classList.toggle("hide");
-        index--;
-      }
-    });
-
+    previous.addEventListener("click", goToPrevious);
+   
     //keyboard event
 
     document.addEventListener("keyup", function (e) {
-
       if (e.key === "ArrowRight") {
-        mediaLightbox[index].classList.toggle("hide");
+        goToNext();
+   
+      } if (e.key === "ArrowLeft") {
+        goToPrevious();
 
-        if (index == mediaLightbox.length - 1) {
-          mediaLightbox[0].classList.toggle("hide");
-          index = 0;
-        } else {
-          mediaLightbox[index + 1].classList.toggle("hide");
-          index++;
-        }
-      } else if (e.key === "ArrowLeft") {
-         mediaLightbox[index].classList.toggle("hide");
-         console.log(index);
-
-         if (index <= 0) {
-           console.log("ok");
-           index = mediaLightbox.length - 1;
-           mediaLightbox[index].classList.toggle("hide");
-         } else {
-           mediaLightbox[index - 1].classList.toggle("hide");
-           index--;
-         }
+      }
+      else if (e.key === "Escape") {
+        closeLightbox();
       }
     });
 
@@ -260,7 +243,7 @@ const photographerPage = (photographers, media) => {
  * Display photographers on html
  */
 
-const galleryDisplay = async(medias) => {
+const galleryDisplay = async (medias) => {
   medias.forEach((media) => {
     let factory = new MediaFactory(media);
     gallery.innerHTML += factory.createHtml();

@@ -19,12 +19,13 @@ class Img {
     this.likes = data.likes;
     this.tags = data.tags;
     this.date = data.date;
+    this.alt = data.alt;
   }
   createHtml() {
     return `
       <article class="gallery_item">
         <div class="media">
-          <img src="./assets/images/${this.photographerId}/${this.image}"/>
+          <img src="./assets/images/${this.photographerId}/${this.image}" alt="${this.alt}"/>
         </div>
        <div class="details">
             <h3>${this.title}</h3>
@@ -55,11 +56,12 @@ class Video {
     this.likes = data.likes;
     this.tags = data.tags;
     this.date = data.date;
+    this.alt = data.alt;
   }
   createHtml() {
     return `<article class="gallery_item">
     <div class="media">
-          <video src="./assets/images/${this.photographerId}/${this.video}" controls type="video/mp4"> </video>
+          <video src="./assets/images/${this.photographerId}/${this.video}" controls type="video/mp4" alt="${this.alt}"> </video>
     </div>
           <div class="details">
             <h3>${this.title}</h3>
