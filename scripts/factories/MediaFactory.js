@@ -25,7 +25,7 @@ class Img {
     return `
       <article class="gallery_item">
         <div class="media">
-          <img src="./assets/images/${this.photographerId}/${this.image}" alt="${this.alt}"/>
+          <img src="./assets/images/${this.photographerId}/${this.image}" alt="${this.alt}" tabindex="5"/>
         </div>
        <div class="details">
             <h3>${this.title}</h3>
@@ -61,7 +61,7 @@ class Video {
   createHtml() {
     return `<article class="gallery_item">
     <div class="media">
-          <video src="./assets/images/${this.photographerId}/${this.video}" controls type="video/mp4" alt="${this.alt}"> </video>
+          <video src="./assets/images/${this.photographerId}/${this.video}" controls type="video/mp4" alt="${this.alt}" tabindex="5"> </video>
     </div>
           <div class="details">
             <h3>${this.title}</h3>

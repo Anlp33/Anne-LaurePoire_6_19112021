@@ -54,18 +54,20 @@ class Photographers {
         </div>    
         
         <div class="button">
-            <button id="contact_button">
+            <button id="contact_button" tabindex="2">
             Contactez-moi
             </button>
         </div>
 
         </div>
         <div id="photo">
-          <img src="./assets/photographers/${this.portrait}" alt="${this.alt}">
+          <img src="./assets/photographers/${this.portrait}" alt="${
+      this.alt
+    }" tabindex="3">
         </div>
         </a>
       </article>
-       <div id="total_likes">
+       <div id="total_likes" tabindex="6">
        <div id="numberTotalLikes" aria-labelledby="nombre total de like"></div>
         <i
           class="fas fa-heart"

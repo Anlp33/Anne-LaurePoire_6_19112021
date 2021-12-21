@@ -228,7 +228,7 @@ const photographerPage = (photographers, media) => {
 
       }
       else if (e.key === "Escape") {
-        closeLightbox();
+        closeLightbox();   
       }
     });
 

@@ -34,14 +34,16 @@ function addEventModal() {
  */
 
 button.addEventListener("click", closeModal);
-// Close modal when escape key is pressed
-// $(document).on('keydown', e => {
-//    const keyCode = e.keyCode ? e.keyCode : e.which
 
-//    if (modal.attr('aria-hidden') == 'false' && keyCode === 27) {
-//       closeModal()
-//    }
-// })
+/**
+ * Close modal when key pressed ECHAP
+ */
+document.addEventListener("keyup", function (e) {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+
 /**
  * Form submission
  */
