@@ -15,7 +15,9 @@ class Photographers {
     return `<article class="card">
        <a href ="./photographer.html?id=${this.id}" >
          <div class="introduction">
-            <img src="./assets/photographers/${this.portrait}" alt="${this.alt}">
+            <img src="./assets/photographers/${this.portrait}" alt="${
+      this.alt
+    }">
              <h2>${this.name}</h2>
             <span class="location">${this.city + ", " + this.country}</span>
             <span class="slogan">${this.tagline}</span>

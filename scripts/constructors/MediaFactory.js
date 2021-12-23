@@ -9,7 +9,6 @@ class MediaFactory {
     }
   }
 }
-
 class Img {
   constructor(data) {
     this.image = data.image;
@@ -31,7 +30,7 @@ class Img {
             <h3>${this.title}</h3>
         <div class="like">
               <span class="numbers">${this.likes}</span>
-              <span class="hearts" data-like="false">
+              <span class="hearts" data-like="false" tabindex="5">
                 <i class="fas fa-heart" alt="coeur" aria-label="ajoute ou supprime le like au clic">
                 </i>
               </span> 
@@ -67,7 +66,7 @@ class Video {
             <h3>${this.title}</h3>
             <div class="like">
               <span class="numbers">${this.likes}</span>
-              <span class="hearts" data-like="false">
+              <span class="hearts" data-like="false" tabindex="5">
                 <i class="fas fa-heart" alt="coeur" aria-label="ajoute ou supprime le like au clic">
                 </i>
               </span></div>
