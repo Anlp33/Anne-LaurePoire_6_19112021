@@ -33,7 +33,12 @@
 
       <section class="filters">
         <label for="Tri par filtre">Trier par</label>
-        <select name="filters" class="filter-select" tabindex="4">
+        <select
+          name="filters"
+          class="filter-select"
+          aria-label="select filter"
+          tabindex="4"
+        >
           <option value="">Selectionner…</option>
           <option value="likes">Popularité</option>
           <option value="date">Date</option>
@@ -75,7 +80,11 @@
             <div id="namePhotographer"></div>
           </div>
           <div id="close_Button">
-            <img src="assets/icons/close.svg" aria-label="Fermer" />
+            <img
+              src="assets/icons/close.svg"
+              alt="fermer"
+              aria-label="Fermer"
+            />
           </div>
         </header>
 
