@@ -37,6 +37,7 @@ const photographerPage = (photographers, media) => {
   let photographerModel = new Photographers(photographersFilter[0]);
   photographerIntro.innerHTML = photographerModel.createHtmlPhotographerPage();
 
+  //display photographer name in Contact modal
   const photographerName = document.getElementById("namePhotographer");
   photographerName.innerHTML = photographerModel.name;
 
