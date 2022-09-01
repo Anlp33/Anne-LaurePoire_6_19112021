@@ -27,12 +27,13 @@ a {
   color: inherit;
 }
 
-.logo img {
+.logo {
+  display: flex;
+  position: relative;
+  width: 200px;
   height: 50px;
-  margin-left: 100px;
   left: 100px;
   top: 42px;
-  margin-bottom: 30px;
 }
 
 #info {
@@ -47,7 +48,7 @@ a {
 #contact_modal {
   display: none;
 }
-#contactPhotographer h2{
+#contactPhotographer h2 {
   display: unset;
 }
 #photo img {
@@ -62,7 +63,7 @@ a {
   align-items: center;
   background-color: #fafafa;
   height: 300px;
-  margin: 0 100px;
+  margin: 100px;
   padding: 0 30px;
 }
 
@@ -136,7 +137,8 @@ a {
   margin-left: 150px;
 }
 
-#contact_button, #sendingButton{
+#contact_button,
+#sendingButton {
   font-size: 20px;
   font-weight: bold;
   color: white;
@@ -306,7 +308,7 @@ select:not(:-internal-list-box) {
   position: fixed;
   bottom: 0;
   right: 0;
-  border-radius: 5px;
+  border-radius: 5px 0px 0 0;
   display: flex;
   align-items: center;
   padding: 15px;
@@ -320,4 +322,167 @@ select:not(:-internal-list-box) {
 }
 #price {
   padding-left: 50px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+  .logo img {
+    width: 150px;
+    height: 50px;
+  }
+  #photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    object-fit: cover;
+  }
+
+  .location,
+  .slogan {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    height: auto;
+    margin: 80px 30px 20px;
+    padding: 30px;
+    flex-direction: column-reverse;
+  }
+  header .filter {
+    gap: 5px;
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 24px;
+    left: 0;
+    top: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: normal;
+  }
+  .tags {
+    font-size: 10px;
+  }
+  #photographer-details {
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    margin-left: 0;
+  }
+
+  .filters {
+    margin: 30px;
+  }
+  #contact_button {
+    font-size: 16px;
+    color: white;
+    padding: 11px;
+    width: 140px;
+    height: 40px;
+    margin-top: 20px;
+  }
+
+  .filter-select {
+    width: 150px;
+    font-size: 16px;
+  }
+
+  #gallery {
+    margin: 10px;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  .gallery_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .details {
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .details h3 {
+    margin: 0;
+  }
+
+  #numberTotalLikes {
+    font-size: 16px;
+  }
+  #total_likes {
+    font-size: 16px;
+    padding: 10px;
+  }
+  #price {
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .card {
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+    height: 300px;
+    margin: 100px 30px;
+    padding: 0 30px;
+  }
+  #photographer-details {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .button {
+    margin-left: 0;
+  }
+  #contact_button {
+    font-size: 18px;
+    color: white;
+    padding: 11px;
+    width: 150px;
+    height: 40px;
+    margin: 20px 0;
+  }
+  #gallery {
+    margin: 30px;
+  }
+  .gallery_item img, .gallery_item video {
+    width: 310px;
+}
+  .filter-select {
+    width: 150px;
+    font-size: 16px;
+  }
+  .details{
+    width: 310px;
+  }
+  .filters{
+    margin: 30px
+  }
+    #numberTotalLikes {
+    font-size: 16px;
+  }
+  #total_likes {
+    font-size: 16px;
+    padding: 10px;
+  }
+  #price {
+    padding-left: 15px;
+  }
 }

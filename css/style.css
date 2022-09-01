@@ -3,24 +3,26 @@
 body {
   font-family: "DM Sans";
   font-style: normal;
+  margin: auto;
+  min-width: 320px;
+  max-width: 1440px;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  width: 968px;
   height: 157px;
-  left: 7px;
-  top: 6px;
+  align-items: center;
+  margin: 20px;
 }
 
+h1 {
+  width: 10%;
+}
 .logo {
   display: flex;
-  position: relative;
   width: 200px;
   height: 50px;
-  left: 100px;
-  top: 42px;
 }
 a {
   list-style: none;
@@ -33,12 +35,9 @@ nav ul {
   text-decoration: none;
   padding-left: 0;
 }
-header .filter {
-  left: 388px;
-  top: 43px;
-  position: absolute;
-}
-.tags, .classTag{
+
+.tags,
+.classTag {
   list-style: none;
   text-decoration: none;
   border: 0.5px solid #c4c4c4;
@@ -64,9 +63,6 @@ h1 {
   font-size: 36px;
   line-height: 47px;
   color: #911c1c;
-  position: absolute;
-  left: 1017px;
-  top: 44px;
   margin: 0;
 }
 h2 {
@@ -92,7 +88,7 @@ h2 {
 
 .card {
   width: 30%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .introduction {
   align-items: center;
@@ -122,4 +118,96 @@ h2 {
   justify-content: center;
   list-style: none;
   text-decoration: none;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  header {
+    height: 100%;
+    flex-direction: column;
+  }
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+  .logo img {
+    width: 150px;
+    height: 50px;
+  }
+  .introduction img {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    object-fit: cover;
+  }
+  header .filter{
+    gap: 5px;
+  }
+  h1 {
+    font-weight: bold;
+    font-size: 18px;
+    left: 0;
+    top: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: normal;
+  }
+  .card {
+    width: 60%;
+  }
+  .tags {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+   header {
+    height: 100%;
+    flex-direction: column;
+  }
+  .logo {
+    width: 150px;
+    height: 50px;
+  }
+  .logo img {
+    width: 150px;
+    height: 50px;
+  }
+  .introduction img {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    object-fit: cover;
+  }
+  header .filter{
+    gap: 5px;
+  }
+  
+  h1 {
+    font-weight: bold;
+    font-size: 18px;
+    left: 0;
+    top: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: normal;
+  }
+  .card {
+    width: 30%;
+    margin-top: 50px;
+
+  }
+  .tags {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
 }

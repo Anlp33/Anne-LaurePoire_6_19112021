@@ -163,8 +163,6 @@ const photographerPage = (photographers, media) => {
     const mediaLightbox = document.querySelectorAll(".media-lightbox");
     const previous = document.getElementById("previous");
     const next = document.getElementById("next");
-    console.log("fonction");
-    console.log(next);
 
     let index = 0;
 
